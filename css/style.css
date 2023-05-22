@@ -158,14 +158,14 @@ img {
 common
 ---------------------------------------------------------*/
 .container {
-  max-width: 1680px;
+  max-width: 1200px;
   width: 96%;
   margin: auto;
   position: relative;
 }
 
 .container_s {
-  max-width: 1680px;
+  max-width: 1200px;
   width: 96%;
   margin: auto;
   position: relative;
