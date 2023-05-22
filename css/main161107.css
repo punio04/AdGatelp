@@ -1,0 +1,846 @@
+@charset "UTF-8";
+/* CSS Document */
+
+::selection {
+  background: #EEE;
+  color: #000;
+}
+
+::-moz-selection {
+  background: #EEE;
+  color: #000;
+}
+
+/*全体*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+body p {
+  padding: 0 0 30px 0;
+  font-family: 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  font-size: 10pt;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-align: center;
+  scrolling: yes;
+}
+
+a,
+a:visited {
+  color: #666;
+  text-decoration: underline;
+  overflow: hidden;
+  outline: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+img {
+  border: none;
+}
+
+/*ここのwidthを調整すると全体の幅が追随します*/
+#wrap {
+  padding: 50px 0;
+  width: 810px;
+  margin: 0 auto;
+}
+
+/*白背景＋角丸部*/
+table.base {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+table.base .LT,
+table.base .RT,
+table.base .LB,
+table.base .RB {
+  width: 20px;
+  height: 20px;
+}
+
+table.base .L,
+table.base .R {
+  width: 20px;
+}
+
+table.base .L,
+table.base .R {
+  height: 20px;
+}
+
+table.base .C {
+  padding: 30px 40px;
+  background: #FFF;
+  text-align: left;
+}
+
+table.base .LT {
+  background: url(../img_dir/baseLT.png) no-repeat left top;
+}
+
+table.base .RT {
+  background: url(../img_dir/baseRT.png) no-repeat left top;
+}
+
+table.base .LB {
+  background: url(../img_dir/baseLB.png) no-repeat left top;
+}
+
+table.base .RB {
+  background: url(../img_dir/baseRB.png) no-repeat left top;
+}
+
+table.base .T {
+  background: url(../img_dir/baseT.png) repeat-x left top;
+}
+
+table.base .B {
+  background: url(../img_dir/baseB.png) repeat-x left top;
+}
+
+table.base .L {
+  background: url(../img_dir/baseL.png) repeat-y left top;
+}
+
+table.base .R {
+  background: url(../img_dir/baseR.png) repeat-y left top;
+}
+
+/*フォームタイトル*/
+h1.biz_title {
+  font-size: 12pt;
+  font-weight: normal;
+  text-align: center;
+  padding: 7px 30px;
+  color: #FFF;
+  z-index: 2;
+}
+
+.title {
+  position: relative;
+  margin-top: 30px
+}
+
+.titleWrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  z-index: 1;
+  background: #FFF;
+}
+
+/*フォーム本体*/
+.form {
+  padding: 30px 0;
+}
+
+.red {
+  color: #990000;
+}
+
+.center {
+  text-align: center;
+}
+
+input,
+textarea {
+  font-family: 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  font-size: 10pt;
+  line-height: 1.6;
+  color: #333;
+}
+
+select {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+textarea {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 150px;
+  padding: 5px;
+  resize: vertical;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 5px;
+}
+
+input[type="file"] {
+  padding: 0px;
+  overflow: visible
+}
+
+.btn {
+  text-align: center;
+  margin: 0 auto;
+  padding: 7px 40px;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/*罫線あり入力部*/
+table.main_withBorder {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  margin: 0 0 40px 0;
+  table-layout: fixed;
+}
+
+table.main_withBorder th,
+table.main_withBorder td {
+  text-align: left;
+  font-weight: normal;
+  padding: 15px 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid #FFF;
+}
+
+table.main_withBorder th {
+  width: 27%;
+  border-right: 1px solid #FFF;
+}
+
+table.main_withBorder td {
+  width: 43%;
+}
+
+table.main_withBorder td.comment {
+  color: #999;
+  width: 30%;
+}
+
+table.main_withBorder tr {
+  background: #fafaf0;
+}
+
+table.main_withBorder .txtAreaComment {
+  color: #999;
+}
+
+/*罫線なし入力部*/
+table.main_noneBorder {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  margin: 0 0 40px 0;
+  table-layout: fixed;
+}
+
+table.main_noneBorder th,
+table.main_noneBorder td {
+  text-align: left;
+  font-weight: normal;
+  padding: 15px 20px;
+  vertical-align: middle;
+  background: #fafaf0;
+}
+
+table.main_noneBorder th {
+  width: 27%;
+  text-align: right;
+}
+
+table.main_noneBorder td {
+  width: 43%;
+  overflow: hidden;
+}
+
+table.main_noneBorder td.comment {
+  color: #999;
+  width: 30%;
+}
+
+table.main_noneBorder tr {}
+
+table.main_noneBorder .txtAreaComment {
+  color: #999;
+}
+
+/*アンケート入力部*/
+table.main_question {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  margin: 0 0 40px 0;
+  table-layout: fixed;
+}
+
+table.main_question td {
+  text-align: center;
+  font-weight: normal;
+  padding: 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid #FFF;
+}
+
+table.main_question td p {
+  padding: 0 0 15px 0;
+}
+
+table.main_question tr {
+  background: #fafaf0;
+}
+
+table.main_question textarea {
+  border: 1px solid #ccc;
+  height: 150px;
+  padding: 0px;
+  resize: vertical;
+}
+
+table.main_question input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 0px;
+  overflow: visible
+}
+
+
+/************************************************ここから色指定************************************************/
+
+/*白のみ*/
+.c1 .title {
+  background: #666666;
+}
+
+body.c1 {
+  background: #ffffff;
+}
+
+.c1 table.main_withBorder th,
+.c1 table.main_withBorder td,
+.c1 table.main_question tr {
+  background: #fff !important;
+}
+
+.c1 table.main_withBorder th,
+.c1 table.main_withBorder td {
+  border-bottom: 1px solid #ddd;
+}
+
+.c1 table.main_withBorder th {
+  border-right: 1px solid #ddd;
+}
+
+.c1 table.main_withBorder {
+  border: 1px solid #ddd;
+}
+
+.c1 table.main_noneBorder th,
+.c1 table.main_noneBorder td {
+  background: #fff !important;
+}
+
+.c1 table.main_question td {
+  color: #777;
+}
+
+.c1 table.main_question td p {
+  color: #333;
+}
+
+.c1 .btn {
+  background: #444444;
+  color: #FFF;
+}
+
+.c1 .btn:hover {
+  background: #222222;
+}
+
+.c1 table.base .LT {
+  background: url(../img_dir/w_baseLT.png) no-repeat left top;
+}
+
+.c1 table.base .RT {
+  background: url(../img_dir/w_baseRT.png) no-repeat left top;
+}
+
+.c1 table.base .LB {
+  background: url(../img_dir/w_baseLB.png) no-repeat left top;
+}
+
+.c1 table.base .RB {
+  background: url(../img_dir/w_baseRB.png) no-repeat left top;
+}
+
+.c1 table.base .T {
+  background: url(../img_dir/w_baseT.png) repeat-x left top;
+}
+
+.c1 table.base .B {
+  background: url(../img_dir/w_baseB.png) repeat-x left top;
+}
+
+.c1 table.base .L {
+  background: url(../img_dir/w_baseL.png) repeat-y left top;
+}
+
+.c1 table.base .R {
+  background: url(../img_dir/w_baseR.png) repeat-y left top;
+}
+
+/*c17 モノトーンのみ*/
+.c17 table.base .LT {
+  background: url(../img_dir/w_baseLT.png) no-repeat left top;
+}
+
+.c17 table.base .RT {
+  background: url(../img_dir/w_baseRT.png) no-repeat left top;
+}
+
+.c17 table.base .LB {
+  background: url(../img_dir/w_baseLB.png) no-repeat left top;
+}
+
+.c17 table.base .RB {
+  background: url(../img_dir/w_baseRB.png) no-repeat left top;
+}
+
+.c17 table.base .T {
+  background: url(../img_dir/w_baseT.png) repeat-x left top;
+}
+
+.c17 table.base .B {
+  background: url(../img_dir/w_baseB.png) repeat-x left top;
+}
+
+.c17 table.base .L {
+  background: url(../img_dir/w_baseL.png) repeat-y left top;
+}
+
+.c17 table.base .R {
+  background: url(../img_dir/w_baseR.png) repeat-y left top;
+}
+
+.c17 table.main_withBorder th,
+.c17 table.main_withBorder td,
+.c17 table.main_question tr {
+  background: #eee !important;
+}
+
+.c17 table.main_noneBorder th,
+.c17 table.main_noneBorder td {
+  background: #eee !important;
+}
+
+
+
+/*色指定：タイトル部背景*/
+.c2 .title {
+  background: #666666;
+}
+
+.c3 .title {
+  background: #333333;
+}
+
+.c4 .title {
+  background: #000000;
+}
+
+.c5 .title {
+  background: #e6821e;
+}
+
+.c6 .title {
+  background: #b3424a;
+}
+
+.c7 .title {
+  background: #c81e14;
+}
+
+.c8 .title {
+  background: #e65a78;
+}
+
+.c9 .title {
+  background: #502864;
+}
+
+.c10 .title {
+  background: #462800;
+}
+
+.c11 .title {
+  background: #0a2346;
+}
+
+.c12 .title {
+  background: #0a5aa0;
+}
+
+.c13 .title {
+  background: #5ab4fa;
+}
+
+.c14 .title {
+  background: #283c0a;
+}
+
+.c15 .title {
+  background: #507832;
+}
+
+.c16 .title {
+  background: #b4be46;
+}
+
+.c17 .title {
+  background: #000000;
+}
+
+.c18 .title {
+  background: #a5a096;
+}
+
+/*色指定：全体背景*/
+body.c2 {
+  background: #eeeeee;
+}
+
+body.c3 {
+  background: #999999;
+}
+
+body.c4 {
+  background: #333333;
+}
+
+body.c5 {
+  background: #fff0d2;
+}
+
+body.c6 {
+  background: #f5ebe6;
+}
+
+body.c7 {
+  background: #dc5046;
+}
+
+body.c8 {
+  background: #ffebe6;
+}
+
+body.c9 {
+  background: #735073;
+}
+
+body.c10 {
+  background: #6e5a46;
+}
+
+body.c11 {
+  background: #6e8796;
+}
+
+body.c12 {
+  background: #78afdc;
+}
+
+body.c13 {
+  background: #dcf1ff;
+}
+
+body.c14 {
+  background: #506432;
+}
+
+body.c15 {
+  background: #91a064;
+}
+
+body.c16 {
+  background: #f5f5d2;
+}
+
+body.c17 {
+  background: #ffffff;
+}
+
+body.c18 {
+  background: #fafaf0;
+}
+
+/*色指定：フォーム入力部分背景*/
+.c2 table.main_withBorder th,
+.c2 table.main_question tr.even {
+  background: #eeeeee;
+}
+
+.c3 table.main_withBorder th,
+.c3 table.main_question tr.even {
+  background: #dddddd;
+}
+
+.c4 table.main_withBorder th,
+.c4 table.main_question tr.even {
+  background: #dddddd;
+}
+
+.c5 table.main_withBorder th,
+.c5 table.main_question tr.even {
+  background: #fff0d2;
+}
+
+.c6 table.main_withBorder th,
+.c6 table.main_question tr.even {
+  background: #f5ebe6;
+}
+
+.c7 table.main_withBorder th,
+.c7 table.main_question tr.even {
+  background: #ffe6dc;
+}
+
+.c8 table.main_withBorder th,
+.c8 table.main_question tr.even {
+  background: #ffebe6;
+}
+
+.c9 table.main_withBorder th,
+.c9 table.main_question tr.even {
+  background: #e1dce6;
+}
+
+.c10 table.main_withBorder th,
+.c10 table.main_question tr.even {
+  background: #f0e6d7;
+}
+
+.c11 table.main_withBorder th,
+.c11 table.main_question tr.even {
+  background: #e6f0f5;
+}
+
+.c12 table.main_withBorder th,
+.c12 table.main_question tr.even {
+  background: #dcf1ff;
+}
+
+.c13 table.main_withBorder th,
+.c13 table.main_question tr.even {
+  background: #dcf1ff;
+}
+
+.c14 table.main_withBorder th,
+.c14 table.main_question tr.even {
+  background: #ebf0dc;
+}
+
+.c15 table.main_withBorder th,
+.c15 table.main_question tr.even {
+  background: #ebf0dc;
+}
+
+.c16 table.main_withBorder th,
+.c16 table.main_question tr.even {
+  background: #f5f5d2;
+}
+
+/*.c17 table.main_withBorder th, .c17 table.main_question tr.even{background:#666666;}*/
+.c18 table.main_withBorder th,
+.c18 table.main_question tr.even {
+  background: #ebebe1;
+}
+
+/*色指定：ボタン部分色*/
+.c2 .btn {
+  background: #777777;
+  color: #FFF;
+}
+
+.c2 .btn:hover {
+  background: #555555;
+}
+
+.c3 .btn {
+  background: #666666;
+  color: #FFF;
+}
+
+.c3 .btn:hover {
+  background: #333333;
+}
+
+.c4 .btn {
+  background: #333333;
+  color: #FFF;
+}
+
+.c4 .btn:hover {
+  background: #000000;
+}
+
+.c5 .btn {
+  background: #fa9628;
+  color: #FFF;
+}
+
+.c5 .btn:hover {
+  background: #e6821e;
+}
+
+.c6 .btn {
+  background: #c7565e;
+  color: #FFF;
+}
+
+.c6 .btn:hover {
+  background: #b3424a;
+}
+
+.c7 .btn {
+  background: #dc3228;
+  color: #FFF;
+}
+
+.c7 .btn:hover {
+  background: #c81e14;
+}
+
+.c8 .btn {
+  background: #f5788c;
+  color: #FFF;
+}
+
+.c8 .btn:hover {
+  background: #e65a78;
+}
+
+.c9 .btn {
+  background: #643c78;
+  color: #FFF;
+}
+
+.c9 .btn:hover {
+  background: #502864;
+}
+
+.c10 .btn {
+  background: #5a3c14;
+  color: #FFF;
+}
+
+.c10 .btn:hover {
+  background: #462800;
+}
+
+.c11 .btn {
+  background: #1e375a;
+  color: #FFF;
+}
+
+.c11 .btn:hover {
+  background: #0a2346;
+}
+
+.c12 .btn {
+  background: #1e6eb4;
+  color: #FFF;
+}
+
+.c12 .btn:hover {
+  background: #0a5aa0;
+}
+
+.c13 .btn {
+  background: #6ec8fa;
+  color: #FFF;
+}
+
+.c13 .btn:hover {
+  background: #5ab4fa;
+}
+
+.c14 .btn {
+  background: #3c501e;
+  color: #FFF;
+}
+
+.c14 .btn:hover {
+  background: #283c0a;
+}
+
+.c15 .btn {
+  background: #648c46;
+  color: #FFF;
+}
+
+.c15 .btn:hover {
+  background: #507832;
+}
+
+.c16 .btn {
+  background: #b4be46;
+  color: #FFF;
+}
+
+.c16 .btn:hover {
+  background: #c8d25a;
+}
+
+.c17 .btn {
+  background: #333333;
+  color: #FFF;
+}
+
+.c17 .btn:hover {
+  background: #000000;
+}
+
+.c18 .btn {
+  background: #b9b4aa;
+  color: #FFF;
+}
+
+.c18 .btn:hover {
+  background: #a5a096;
+}
+
+
+.backbtn {
+  text-align: center;
+  margin: 0 auto;
+  padding: 7px 10px;
+  border: solid 0px #DFDFDF;
+  border-radius: 3px;
+}
+
+.backbtn:hover {
+  cursor: pointer;
+}
+
+.backbtn {
+  background: #BDBDBD;
+  color: #FFF;
+}
+
+.backbtn:hover {
+  background: #A4A4A4;
+}
